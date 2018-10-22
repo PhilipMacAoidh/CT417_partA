@@ -1,4 +1,4 @@
-language: java
-
-jdk:
-	-oraclejdk8
+name: CT417_partA_runCI
+type: runCI
+steps:
+  - IN: CT417_partA_ciRepo
