@@ -47,4 +47,18 @@ public class CourseProgramme {
 	public void setEndDate(LocalDate endDate) {
 		EndDate = endDate;
 	}
+	
+	@Override public String toString(){
+        String modulesSave = new String();
+        for(int i=0; i<getModules().size(); i++){
+                    modulesSave += getModules().get(i).getName() + ", ";
+        }
+        String studentsSave = new String();
+        for(int i=0; i<getStudents().size(); i++){
+                    studentsSave += getStudents().get(i).getName() + ", ";
+        }
+        return "Course: " + Name + "\nStart Date: " + StartingDate + "\tEnd Date: " + EndDate +
+                "\nModules: " +  modulesSave +
+                "\nStudents: " + studentsSave;
+    }
 }

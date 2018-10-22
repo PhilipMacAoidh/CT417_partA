@@ -45,5 +45,19 @@ public class Module {
 	public void setCourses(CourseProgramme course) {
 		Courses.add(course);
 	}
+	
+	@Override public String toString(){
+        String coursesSave = new String();
+        for(int i=0; i<getCourses().size(); i++){
+                    coursesSave += getCourses().get(i).getName() + ", ";
+        }
+        String studentsSave = new String();
+        for(int i=0; i<getStudents().size(); i++){
+                    studentsSave += getStudents().get(i).getName() + ", ";
+        }
+        return "Module: " + Name + "\tID: " + Integer.toString(ID) +
+                "\nCourses: " +  coursesSave +
+                "\nStudents: " + studentsSave;
+    }
 
 }

@@ -67,7 +67,7 @@ public class Student {
 	}
 
 	public void setModules(Module mod) {
-		this.Modules.add(mod);
+		Modules.add(mod);
 	}
 
 	public String getUsername() {
@@ -77,5 +77,15 @@ public class Student {
 	public void setUsername() {
 		Username = Name + Integer.toString(Age);
 	}
-
+	
+	 @Override public String toString(){
+	        String courseSave = getCourse().getName();
+	        String modulesSave = new String();
+	        for(int i=0; i<getModules().size(); i++){
+	                    modulesSave += getModules().get(i).getName() + ", ";
+	        }
+	        return "Student: " + this.Name + "\tID: " + Integer.toString(ID) +
+	                "\nCourse: " +  courseSave +
+	                "\nModules: " + modulesSave;
+	    }
 }
